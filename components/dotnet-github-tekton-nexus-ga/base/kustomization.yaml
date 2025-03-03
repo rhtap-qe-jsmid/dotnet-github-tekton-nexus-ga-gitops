@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: dotnet-github-tekton-nexus-ga
+  janus-idp.io/tekton: dotnet-github-tekton-nexus-ga
+  backstage.io/kubernetes-id: dotnet-github-tekton-nexus-ga
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: dotnet-github-tekton-nexus-ga
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
